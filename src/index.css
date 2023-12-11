@@ -1,0 +1,14 @@
+.folder-structure{
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 255, 251), rgb(0, 174, 255));
+}
+.folder-structure .folders{
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff38;
+    border-radius: 10px;
+}
