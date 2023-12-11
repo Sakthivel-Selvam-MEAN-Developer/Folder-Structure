@@ -31,11 +31,11 @@ const Folder = ({ name, content, depth, onAddFile, onEditFile, onDeleteFile }) =
         const itemType = item.split('.').map((val, index, item) => {
             if(index + 1 === item.length){
                 if(val === 'jpg'){
-                    return <img className="ms-2 me-2" src="/image-svgrepo-com.svg" alt="image" width={20}/>
+                    return <img className="ms-2 me-2" src="./image-svgrepo-com.svg" alt="image" width={20}/>
                 } else if (val === 'mp4') {
-                    return <img className="ms-2 me-2" src="/video-svgrepo-com.svg" alt="image" width={20}/>
+                    return <img className="ms-2 me-2" src="./video-svgrepo-com.svg" alt="image" width={20}/>
                 } else {
-                    return <img className="ms-2 me-2" src="/menu-svgrepo-com.svg" alt="image" width={20}/>
+                    return <img className="ms-2 me-2" src="./menu-svgrepo-com.svg" alt="image" width={20}/>
                 }
             }
         })
@@ -48,11 +48,11 @@ const Folder = ({ name, content, depth, onAddFile, onEditFile, onDeleteFile }) =
         <div style={{ marginLeft: depth * 20 }} className="folder">
             <div>
                 <span onClick={handleToggle} style={{ cursor: 'pointer' }}>
-                    {isExpanded ? <img src="/down-sign-svgrepo-com.svg" style={{transform: !isExpanded ? 'rotate(-90deg)' : 'none'}} alt="down-sign" width={15} className="ms-2 me-2 " id='down-sign' /> : <img src="/down-sign-svgrepo-com.svg" style={{transform:'rotate(-90deg)'}} alt="down-sign" width={15} className="ms-2 me-2 " id='down-sign' />}
+                    {isExpanded ? <img src="./down-sign-svgrepo-com.svg" style={{transform: !isExpanded ? 'rotate(-90deg)' : 'none'}} alt="down-sign" width={15} className="ms-2 me-2 " id='down-sign' /> : <img src="./down-sign-svgrepo-com.svg" style={{transform:'rotate(-90deg)'}} alt="down-sign" width={15} className="ms-2 me-2 " id='down-sign' />}
                 </span>
                 {name}
                 <button className="btn" onClick={handleAddFile}>
-                    <img src="/add-file-8-svgrepo-com.svg" alt="add-file" width={25} />
+                    <img src="./add-file-8-svgrepo-com.svg" alt="add-file" width={25} />
                 </button>
             </div>
             {isExpanded && (
@@ -86,10 +86,10 @@ const Folder = ({ name, content, depth, onAddFile, onEditFile, onDeleteFile }) =
                                         <>
                                             {handleAddImage(item)}{item}
                                             <button onClick={() => handleEditFile(item)} className="btn">
-                                                <img src="/edit-alt-svgrepo-com.svg" alt="edit" width={25} />
+                                                <img src="./edit-alt-svgrepo-com.svg" alt="edit" width={25} />
                                             </button>
                                             <button className="btn" onClick={() => handleDeleteFile(item)}>
-                                                <img src="/delete-alt-2-svgrepo-com.svg" alt="delete" width={25} />
+                                                <img src="./delete-alt-2-svgrepo-com.svg" alt="delete" width={25} />
                                             </button>
                                         </>
                                     )}
